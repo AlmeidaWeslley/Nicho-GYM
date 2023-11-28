@@ -658,7 +658,7 @@ footer {
 }
 
 .nomes{
-    position: fixed;
+    position: relative;
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
 }
