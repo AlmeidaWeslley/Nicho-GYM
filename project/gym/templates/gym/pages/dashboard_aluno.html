@@ -27,7 +27,7 @@
                         <button type="submit" class="button_pesquisa"><i class="fa-solid fa-magnifying-glass icone_pesquisa "></i></button> -->
 
                 </div>
-                <button class="button_icone_filter"><i class="fa-sharp fa-solid fa-filter icone_filter"></i></button>
+                <!-- <button class="button_icone_filter"><i class="fa-sharp fa-solid fa-filter icone_filter"></i></button> -->
                 <a href="{% url 'gym:cadastro_aluno' %}"><button class="button_icone_circle"><i class="fa-solid fa-circle-plus icone_circle_plus"> </i></button></a>
                 
             </div>
@@ -40,27 +40,28 @@
                     <li>
                         {% if aluno.Situacao %}
                             <div class="listagem_li_alunos green">
-
                                 <a class="nomes" href="{% url 'gym:exibir_aluno' id=aluno.id %}">{{ aluno.Nome }} {{ aluno.sobrenome }}</a>
-                                <form action="{% url 'gym:dashboard_aluno_edit' aluno.id %}" method="post">
-                                    {% csrf_token %}
-                                    <!-- <input type="hidden" name="editar_aluno" value="{{ aluno.id }}"> -->
+                                    <!-- <form action="{% url 'gym:dashboard_aluno_edit' aluno.id %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="editar_aluno" value="{{ aluno.id }}">
+                                        <button class="button_icone_pen"> <i class="fa-solid fa-pen"></i></button>
+                                    </form> -->
                                     <button class="button_icone_pen"> <i class="fa-solid fa-pen"></i></button>
-                                </form>
-                                <form action="{% url 'gym:dashboard_aluno_delete' aluno.id %}" method="post">
-                                    {% csrf_token %}
-                                    <!-- <input type="hidden" name="delete_aluno" value="{{ aluno.id }}"> -->
-                                    <button type="submit" class="button_icone_trash"><i class="fa-solid fa-trash"></i></button>
-                                </form>
+                                    <form action="{% url 'gym:dashboard_aluno_delete' aluno.id %}" method="post">
+                                        {% csrf_token %}
+                                        <!-- <input type="hidden" name="delete_aluno" value="{{ aluno.id }}"> -->
+                                        <button type="submit" class="button_icone_trash"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
                             </div>
                         {% else %}
                             <div class="listagem_li_alunos red">
                                 <a class="nomes" href="{% url 'gym:exibir_aluno' id=aluno.id %}">{{ aluno.Nome }} {{ aluno.sobrenome }}</a>
-                                <form action="{% url 'gym:dashboard_aluno_edit' aluno.id %}" method="post">
-                                    {% csrf_token %}
-                                    <!-- <input type="hidden" name="editar_aluno" value="{{ aluno.id }}"> -->
-                                    <button class="button_icone_pen"> <i class="fa-solid fa-pen"></i> </button>
-                                </form>
+                                <!-- <form action="{% url 'gym:dashboard_aluno_edit' aluno.id %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="editar_aluno" value="{{ aluno.id }}">
+                                        <button class="button_icone_pen"> <i class="fa-solid fa-pen"></i></button>
+                                    </form> -->
+                                <button class="button_icone_pen"> <i class="fa-solid fa-pen"></i></button>
                                 <form action="{% url 'gym:dashboard_aluno_delete' aluno.id %}" method="post">
                                     {% csrf_token %}
                                     <!-- <input type="hidden" name="delete_aluno" value="{{ aluno.id }}"> -->

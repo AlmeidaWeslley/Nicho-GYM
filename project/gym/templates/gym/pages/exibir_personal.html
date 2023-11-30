@@ -12,24 +12,13 @@
                     <ul>
                         <li class="li-exibir">
                             <div class="exibir-nome">
-                                <h2>Nome: {{ aluno.Nome }} {{ aluno.sobrenome }}</h2>
+                                <h2>Nome: {{ personal.nome }} {{ personal.sobrenome }}</h2>
                             </div>
                             <div class="exibir-email">
-                                <h2>Email: {{ aluno.E_mail }}</h2>
-                            </div>
-                            <div class="exibir-datas">
-                                <h2>Data Nascimento: {{ aluno.Data_Nascimento }}</h2>
-                            </div>
-                            <div class="exibir-datas">
-                                <h2>Data pagamento: {{ aluno.Data_pagamento }}</h2>
+                                <h2>Email: {{ personal.E_mail }}</h2>
                             </div>
                             <div class="exibir-pagamento">
-                                <h2>Valor pagamento: {{ aluno.Valor_pagamento }}</h2>
-                                <h2>Pagamento: {% if aluno.Situacao %} Realizado {% else %} Pendente {% endif %}</h2>
-                            </div>
-                            <div class="exibir-pagamento">
-                                <h2>Data inscricao: {{ aluno.Data_inscricao }}</h2>
-                                <h2>telefone: {{ aluno.telefone }}</h2>
+                                <h2>telefone: {{ personal.telefone }}</h2>
                             </div>
                         </li>
                     </ul>
@@ -37,7 +26,7 @@
 
                 <div class="">
                     <div class="form-grup form-button">
-                        <a href="{% url 'gym:dashboard_aluno'%}"><button type="button">Voltar</button></a>
+                        <a href="{% url 'gym:dashboard_personal'%}"><button type="button">Voltar</button></a>
 
                     </div>
                 </div>

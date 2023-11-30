@@ -7,11 +7,11 @@
     <div class="container-card">
         <div class="linha_01">
             <div class="dashboard_aluno card">
-                <h2>{{ quantidade_alunos }}</h2>
-                <p>Aluno</p>
-                <img src="{% static 'global/img/image_aluno.png' %}" alt="">
+                <a href="{% url 'gym:dashboard_aluno' %}"><h2>{{ quantidade_alunos }}</h2></a>
+                <a href="{% url 'gym:dashboard_aluno' %}"><p>Aluno</p></a>
+                <a href="{% url 'gym:dashboard_aluno' %}"><img src="{% static 'global/img/image_aluno.png' %}" alt=""></a>
             </div>
-            <div class="dashboard_aniversariantes card">
+            <!-- <div class="dashboard_aniversariantes card">
                 <h2>00</h2>
                 <p>Aniversariantes</p>
                 <img src="{% static 'global/img/image_aniversariantes.png' %}" alt="">
@@ -20,26 +20,26 @@
                 <h2>00</h2>
                 <p>Risco</p>
                 <img src="{% static 'global/img/image_risco.png' %}" alt="">
+            </div> -->
+
+            <div class="dashboard_personal card">
+                <a href="{% url 'gym:dashboard_personal' %}"><h2>{{ quantidade_personais }}</h2></a>
+                <a href="{% url 'gym:dashboard_personal' %}"><p>Personais</p></a>
+                <a href="{% url 'gym:dashboard_personal' %}"><img src="{% static 'global/img/image_personal.png' %}" alt=""></a>
             </div>
         </div>
         <div class="linha_02">
             <div class="dashboard_pendentes card ">
-                <h2>{{ quantidade_pendente }}</h2>
-                <p>Pendentes</p>
-                <img src="{% static 'global/img/image_pendente.png' %}" alt="">
+                <a href="{% url 'gym:dashboard_aluno' %}"><h2>{{ quantidade_pendente }}</h2></a>
+                <a href="{% url 'gym:dashboard_aluno' %}"><p>Pendentes</p></a>
+                <a href="{% url 'gym:dashboard_aluno' %}"><img src="{% static 'global/img/image_pendente.png' %}" alt=""></a>
             </div>
             <div class="dashboard_avaliacao card ">
-
-                <h2>{{ quantidade_avaliacao }}</h2>
-
-                <p>Avaliações</p>
-                <img src="{% static 'global/img/image_avaliacao.png' %}" alt="">
+                <a href="{% url 'gym:dashboard_avaliacao' %}"><h2>{{ quantidade_avaliacao }}</h2></a>
+                <a href="{% url 'gym:dashboard_avaliacao' %}"><p>Avaliações</p></a>
+                <a href="{% url 'gym:dashboard_avaliacao' %}"><img src="{% static 'global/img/image_avaliacao.png' %}" alt=""></a>
             </div>
-            <div class="dashboard_personal card">
-                <h2>00</h2>
-                <p>Personais</p>
-                <img src="{% static 'global/img/image_personal.png' %}" alt="">
-            </div>
+            
         </div>
     </div>
 </body>

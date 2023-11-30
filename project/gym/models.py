@@ -41,7 +41,7 @@ class Personal(models.Model):
     nome = models.CharField(max_length=150)
     sobrenome = models.CharField(max_length=100)
     E_mail = models.EmailField(max_length=254)
-    telefone = models.IntegerField(default=None)
+    telefone = models.CharField(max_length=15)
     academia = models.ForeignKey(
         Academia, on_delete=models.CASCADE, null=True, blank=True, default=None)  # noqa: E501
 
