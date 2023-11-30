@@ -33,7 +33,12 @@ urlpatterns = [
 
     path('dashboard/exibir_avaliacao/int<int:id>', views.exibir_avaliacao, name='exibir_avaliacao'),
     path('dashboard/exibir_aluno/int<int:id>', views.exibir_aluno, name='exibir_aluno'),
-
+    path('dashboard/dashboard_personal/', views.dashboard_personal, name='dashboard_personal'),
+    path('personal/', views.cadastro_personal, name='cadastro_personal'),
+    path('personal/create/', views.cadastro_personal_create, name='personal_cadastrado'),
+    path('personal/exibir_personal/<int:id>', views.exibir_personal, name='exibir_personal'),
+    path('dashboard/dashboard_personal/<int:pk>/edit', views.dashboard_personal_edit, name='dashboard_personal_edit'),
+    path('dashboard/dashboard_personal/<int:pk>/delete', views.dashboard_personal_delete, name='dashboard_personal_delete'),
 
 
 ]

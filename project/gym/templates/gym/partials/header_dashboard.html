@@ -6,27 +6,33 @@
     <img src="{% static 'global/img/logoAcad 1.png' %}" alt="">
 
     <div class="menu link">
-        <div>
-            <a href="{% url 'gym:dashboard_aluno' %}">Alunos</a>
+        <div class="conteiner-icone-header">
+            <div class="icone-header">
+                <a href="{% url 'gym:dashboard_aluno' %}"><i class="fa-solid fa-people-group"></i></a>
+            </div>
+            <a href="{% url 'gym:dashboard_aluno' %}"><h4 class="header-letter">Alunos</h4></a>
         </div>
-        <div>
-            <a href="#">Personais</a>
+        <div class="conteiner-icone-header">
+            <div class="icone-header">
+                <a href="{% url 'gym:dashboard_personal' %}"><i class="fa-solid fa-dumbbell icone_header_personais"></i></a>  
+            </div>  
+            <a href="{% url 'gym:dashboard_personal' %}"><h4 class="header-letter">Personais</h4></a>
         </div>
-        <div>
-
-            <a href="{% url 'gym:dashboard_avaliacao' %}">Avaliações</a>
-
-        </div>
-        <div>
-            <a href="#">Financeiro</a>
+        <div class="conteiner-icone-header">
+            <div class="icone-header">
+                <a href="{% url 'gym:dashboard_avaliacao' %}"><i class="fa-solid fa-check icone_header_avaliacao"></i></a>
+            </div>
+            <a href="{% url 'gym:dashboard_avaliacao' %}"><h4 class="header-letter">Avaliação</h4></a>
         </div>
     </div>
     <div class="logout link">
-        <form action="{% url 'gym:logout' %}" method='POST'>
-            {% csrf_token %}
-            <input type="hidden" name="username" value="{{ request.user.username }}">
-           <button class = "button_logout" type="submit"> logout </button> 
-        </form>
+        <div class="container-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <form action="{% url 'gym:logout' %}" method='POST'>
+                {% csrf_token %}
+                <input type="hidden" name="username" value="{{ request.user.username }}">
+            <button class = "button_logout" type="submit"><h4 class="header-letter">logout</h4></button>
+            </form>
+        </div>
     </div>
-        
 </header>

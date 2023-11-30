@@ -17,10 +17,19 @@
         <div class="pesquisa">
             <div class="itens">
                 <div class="barra_pesquisa">
-                    <input type="search" name="input" class="input">
-                    <button class="button_pesquisa"><i class="fa-solid fa-magnifying-glass icone_pesquisa "></i></button>
+
+                    <form action="" method="get">
+                        {% csrf_token %}
+                        <input type="text" name="input" class="input">
+                        <button type="submit" class="button_pesquisa"><i class="fa-solid fa-magnifying-glass icone_pesquisa "></i></button>
+                    </form>
+                        <!-- <input type="text" name="input" class="input">
+                        <button type="submit" class="button_pesquisa"><i class="fa-solid fa-magnifying-glass icone_pesquisa "></i></button> -->
+
                 </div>
-                <button class="button_icone_filter"><i class="fa-sharp fa-solid fa-filter icone_filter"></i></button>
+                <!-- <button class="button_icone_filter"><i class="fa-sharp fa-solid fa-filter icone_filter"></i></button> -->
+                
+                
             </div>
         </div>
 
@@ -32,22 +41,22 @@
                         {% if aluno.Situacao %}
                             <div class="listagem_li_avaliacao green">
                                 <a class="nomes" href="{% url 'gym:exibir_avaliacao' id=aluno.id %}">{{ aluno.Nome }} {{ aluno.sobrenome }}</a>
-                                <button class="button_icone_pen_avaliacao"> <i class="fa-solid fa-pen"></i> </button>
-                                <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button>
+                                <!-- <button class="button_icone_pen_avaliacao"> <i class="fa-solid fa-pen"></i> </button>
+                                <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button> -->
                                 <form action="{% url 'gym:avaliacao' id=aluno.id %}" method="post">
                                     {% csrf_token %}
-                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus"> </i></button>
+                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
                                 </form>
                             </div>
                             
                         {% else %}
                             <div class="listagem_li_avaliacao red">
                                 <a class="nomes" href="{% url 'gym:exibir_avaliacao' id=aluno.id %}">{{ aluno.Nome }} {{ aluno.sobrenome }}</a>
-                                <button class="button_icone_pen_avaliacao"> <i class="fa-solid fa-pen"></i> </button>
-                                <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button>
+                                <!-- <button class="button_icone_pen_avaliacao"> <i class="fa-solid fa-pen"></i> </button>
+                                <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button> -->
                                 <form action="{% url 'gym:avaliacao' id=aluno.id %}" method="post">
                                     {% csrf_token %}
-                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus"> </i></button>
+                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
                                 </form>
                             </div>
                             
