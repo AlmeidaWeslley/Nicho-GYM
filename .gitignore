@@ -127,3 +127,8 @@ _local_settings.py
 gunicorn-error-log
 db.sqlite3
 db copy.sqlite3
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
