@@ -6,4 +6,4 @@ Trello: https://trello.com/b/WHRSsA4l/kanban
 
 Installar as dependencias:
 
-  pip install -r requeriments.txt
+  pip install -r requirements.txt
