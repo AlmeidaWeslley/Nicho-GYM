@@ -13,7 +13,7 @@
 </head>
 <body class="body">
     <div class="container_dashboard">
-        <a href="{% url 'gym:dashboard' %}"><button class="button_voltar"><i class="fa-solid fa-circle-arrow-left icone_voltar"></i></button></a>
+        <a href="{% url 'gym:dashboard' %}"><button class="button_voltar" id="button_voltar"><i class="fa-solid fa-circle-arrow-left icone_voltar"></i></button></a>
         <div class="pesquisa">
             <div class="itens">
                 <div class="barra_pesquisa">
@@ -28,7 +28,7 @@
 
                 </div>
                 <!-- <button class="button_icone_filter"><i class="fa-sharp fa-solid fa-filter icone_filter"></i></button> -->
-                <a href="{% url 'gym:cadastro_aluno' %}"><button class="button_icone_circle"><i class="fa-solid fa-circle-plus icone_circle_plus"> </i></button></a>
+                <a href="{% url 'gym:cadastro_aluno' %}"><button class="button_icone_circle" id="adicionar"><i class="fa-solid fa-circle-plus icone_circle_plus"> </i></button></a>
                 
             </div>
         </div>
@@ -50,7 +50,7 @@
                                     <form action="{% url 'gym:dashboard_aluno_delete' aluno.id %}" method="post">
                                         {% csrf_token %}
                                         <!-- <input type="hidden" name="delete_aluno" value="{{ aluno.id }}"> -->
-                                        <button type="submit" class="button_icone_trash"><i class="fa-solid fa-trash"></i></button>
+                                        <button type="submit" class="button_icone_trash" id="deletar"><i class="fa-solid fa-trash"></i></button>
                                     </form>
                             </div>
                         {% else %}
@@ -65,7 +65,7 @@
                                 <form action="{% url 'gym:dashboard_aluno_delete' aluno.id %}" method="post">
                                     {% csrf_token %}
                                     <!-- <input type="hidden" name="delete_aluno" value="{{ aluno.id }}"> -->
-                                    <button type="submit" class="button_icone_trash"><i class="fa-solid fa-trash"></i></button>
+                                    <button type="submit" class="button_icone_trash" id="deletar"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                             </div>
                         {% endif %}

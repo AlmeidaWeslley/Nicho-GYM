@@ -27,7 +27,7 @@ class AlunoRegister(forms.ModelForm):
         add_placeholder(self.fields['sobrenome'], 'Ex.: Almeida')
         add_placeholder(self.fields['E_mail'], 'Ex.: João@.com')
         add_placeholder(self.fields['Data_Nascimento'], 'Ex.: 10/10/2010')
-        add_placeholder(self.fields['Valor_pagamento'], 'Ex.: 100')
+        add_placeholder(self.fields['Data_pagamento'], 'Ex.: 11/11/2011')
         add_placeholder(self.fields['telefone'], '(00) 00000-0000')
         self.fields['Data_Nascimento'].widget.attrs.update(
             {'class': 'mask-date'})

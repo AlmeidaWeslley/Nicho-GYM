@@ -13,7 +13,7 @@
 </head>
 <body class="body">
     <div class="container_dashboard">
-        <a href="{% url 'gym:dashboard' %}"><button class="button_voltar"><i class="fa-solid fa-circle-arrow-left icone_voltar"></i></button></a>
+        <a href="{% url 'gym:dashboard' %}"><button class="button_voltar" id="button_voltar"><i class="fa-solid fa-circle-arrow-left icone_voltar"></i></button></a>
         <div class="pesquisa">
             <div class="itens">
                 <div class="barra_pesquisa">
@@ -45,7 +45,7 @@
                                 <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button> -->
                                 <form action="{% url 'gym:avaliacao' id=aluno.id %}" method="post">
                                     {% csrf_token %}
-                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
+                                    <button class="button_icone_circle_avaliacao" id="adicionar"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
                                 </form>
                             </div>
                             
@@ -56,7 +56,7 @@
                                 <button class="button_icone_trash_avaliacao"><i class="fa-solid fa-trash"></i></button> -->
                                 <form action="{% url 'gym:avaliacao' id=aluno.id %}" method="post">
                                     {% csrf_token %}
-                                    <button class="button_icone_circle_avaliacao"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
+                                    <button class="button_icone_circle_avaliacao" id="adicionar"><i class="fa-solid fa-circle-plus icone_circle_plus_avaliacao"> </i></button>
                                 </form>
                             </div>
                             
